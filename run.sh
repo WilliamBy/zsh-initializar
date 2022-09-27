@@ -1,10 +1,10 @@
-#!/usr/bin/sh
+#!/usr/bin/env bash
 
 apt_path="$(which apt)"
 if [ -n "${apt_path}" ]; then
 	# ZSH Debian Series
-	apt install zsh -y
-	chsh -s /usr/bin/zsh
+	sudo apt install zsh -y
+	sudo chsh -s /usr/bin/zsh
 else
 	echo "apt not found!"
 	exit 1
@@ -14,6 +14,13 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 # Starship
 echo "y" | curl -sS https://starship.rs/install.sh | sh
+user_config="${HOME}/.config"
+if [ ! -e "${user_config}" ];
+then
+	mkdir "${user_config}"
+else [ -f "${user_config}" ];
+	echo "cannot create directory ~/.config, please check if there is a same name file"
+fi
 cat ./config/starship.toml > "${HOME}/.config/starship.toml"
 
 # set zshrc and aliases
