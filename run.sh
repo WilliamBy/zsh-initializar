@@ -1,13 +1,17 @@
 #!/usr/bin/env bash
 
 apt_path="$(which apt)"
-if [ -n "${apt_path}" ]; then
-	# ZSH Debian Series
-	sudo apt install zsh -y
-	sudo chsh -s /usr/bin/zsh
-else
+zsh_path="$(which zsh)"
+if [ -z "${apt_path}" ];
+then
 	echo "apt not found!"
 	exit 1
+fi
+if [ -z "${zsh_path}" ];
+then
+	# install zsh
+	sudo apt update
+	sudo apt install zsh -y
 fi
 # Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -26,5 +30,8 @@ cat ./config/starship.toml > "${HOME}/.config/starship.toml"
 # set zshrc and aliases
 cat ./config/.zshrc > "${HOME}/.zshrc"
 cat ./config/.aliases > "${HOME}/.aliases"
+
+# change default login shell to zsh
+sudo chsh -s /usr/bin/zsh
 echo "Success! You can now relogin to enjoy new shell!"
 echo "For more information refer to https://starship.rs and https://github.com/ohmyzsh/ohmyzsh/wiki"
