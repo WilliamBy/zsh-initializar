@@ -18,8 +18,7 @@ Sync my own shell settings when using a new environment with convenience.
 
 1. `git clone <repo-url>`
 2. `cd <repo>`
-3. `chmod +x ./run.sh`
-4. `sudo ./run.sh`
+4. `sh ./run.sh`
 
 ## Recommendation
 

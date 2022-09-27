@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 apt_path="$(which apt)"
 zsh_path="$(which zsh)"
@@ -11,9 +11,11 @@ fi
 if [ -z "${zsh_path}" ];
 then
 	# install zsh
-	echo "installing zsh"
+	echo "installing zsh..."
 	sudo apt update
 	sudo apt install zsh -y
+else
+	echo "using existed zsh."
 fi
 
 ohmyzsh="${HOME}/.oh-my-zsh"
@@ -23,7 +25,7 @@ then
 fi
 
 echo "installing oh-my-zsh..."
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc --unattended
 
 echo "installing starship..."
 echo "y" | sh -c "$(curl -sS https://starship.rs/install.sh)"
