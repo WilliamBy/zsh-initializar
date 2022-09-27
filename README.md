@@ -1,7 +1,5 @@
 # zsh-initializar 
 
-----
-
 ## Introduction
 
 Sync my own shell settings when using a new environment with convenience.
