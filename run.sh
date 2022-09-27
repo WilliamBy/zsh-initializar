@@ -18,17 +18,17 @@ else
 	echo "using existed zsh."
 fi
 
-ohmyzsh="${HOME}/.oh-my-zsh"
-if [ -e "${ohmyzsh}" ];
-then
-	rm -rf "${ohmyzsh}"
-fi
+# ohmyzsh="${HOME}/.oh-my-zsh"
+# if [ -e "${ohmyzsh}" ];
+# then
+# 	rm -rf "${ohmyzsh}"
+# fi
 
 echo "installing oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc --unattended
 
 echo "installing starship..."
-echo "y" | sh -c "$(curl -sS https://starship.rs/install.sh)"
+sh -c "$(curl -sS https://starship.rs/install.sh)" "" -y
 user_config="${HOME}/.config"
 if [ ! -e "${user_config}" ];
 then
