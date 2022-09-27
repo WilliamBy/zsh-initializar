@@ -6,13 +6,13 @@ Sync my own shell settings when using a new environment with convenience.
 
 ## Including
 
-[x] zsh preset
-[x] oh-my-zsh preset
-[ ] oh-my-zsh plugins sync
-[x] starship preset
-[ ] bash preset
-[x] some aliases
-[x] support Debian/Ubuntu
+- [x] zsh preset
+- [x] oh-my-zsh preset
+- [ ] oh-my-zsh plugins sync
+- [x] starship preset
+- [ ] bash preset
+- [x] some aliases
+- [x] support Debian/Ubuntu
 
 ## Installing
 

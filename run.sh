@@ -28,7 +28,8 @@ echo "installing oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc --unattended
 
 echo "installing starship..."
-sh -c "$(curl -sS https://starship.rs/install.sh)" "" -y
+sh -c "$(curl -fsSL https://starship.rs/install.sh)" "" -y
+
 user_config="${HOME}/.config"
 if [ ! -e "${user_config}" ];
 then
