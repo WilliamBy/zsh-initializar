@@ -7,6 +7,7 @@ then
 	echo "apt not found!"
 	exit 1
 fi
+
 if [ -z "${zsh_path}" ];
 then
 	# install zsh
@@ -14,11 +15,18 @@ then
 	sudo apt update
 	sudo apt install zsh -y
 fi
+
+ohmyzsh="${HOME}/.oh-my-zsh"
+if [ -e "${ohmyzsh}" ];
+then
+	rm -rf "${ohmyzsh}"
+fi
+
 echo "installing oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "installing starship..."
-echo "y" | curl -sS https://starship.rs/install.sh | sh
+echo "y" | sh -c "$(curl -sS https://starship.rs/install.sh)"
 user_config="${HOME}/.config"
 if [ ! -e "${user_config}" ];
 then
