@@ -1,6 +1,4 @@
 #!/usr/bin/sh
-# zsh needs to be installed and set as login shell first
-# for example: sudo apt install zsh && chsh -s /usr/bin/zsh
 
 apt_path="$(which apt)"
 if [ -n "${apt_path}" ]; then
@@ -15,7 +13,7 @@ fi
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Starship
-curl -sS https://starship.rs/install.sh | sh
+echo "y" | curl -sS https://starship.rs/install.sh | sh
 cat ./config/starship.toml > "${HOME}/.config/starship.toml"
 
 # set zshrc and aliases
