@@ -5,7 +5,7 @@
 apt_path=$(which apt)
 if [ -n $apt_path ]; then
 	# ZSH Debian Series
-	apt install zsh
+	apt install zsh -y
 	chsh -s /usr/bin/zsh
 
 	# Oh-My-Zsh
@@ -20,4 +20,6 @@ if [ -n $apt_path ]; then
 	cp ./config/.aliases $HOME/.aliases
 else
 	echo "apt not found!"
+	exit 1
 fi
+echo "Success! You can now relogin to enjoy new shell!"
