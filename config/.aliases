@@ -1,0 +1,4 @@
+# This script is used to define aliases separately
+alias cht='cheat'
+alias bat='batcat'
+alias syncproxy="source ~/.syncproxy"
