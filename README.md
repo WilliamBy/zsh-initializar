@@ -18,11 +18,11 @@ Sync my own shell settings when using a new environment with convenience.
 
 1. `git clone <repo-url>`
 2. `cd <repo>`
-3. `sudo chmod +x ./sync.sh`
+3. `chmod +x ./sync.sh`
 4. `sudo ./sync.sh`
 
 ## Recommendation
 
 - Font Famliy: "FiraCode Nerd Font Mono", "Microsoft YaHei Mono"
-- Terminal Color Schema: "Snizzy"
+- Terminal Color Schema: "Snazzy"
 - Editor Color Theme: "Atom One Dark"

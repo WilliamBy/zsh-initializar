@@ -2,8 +2,8 @@
 # zsh needs to be installed and set as login shell first
 # for example: sudo apt install zsh && chsh -s /usr/bin/zsh
 
-apt_path=`which apt`
-if [[ -n $apt_path ]]; then
+apt_path=$(which apt)
+if [ -n $apt_path ]; then
 	# ZSH Debian Series
 	apt install zsh
 	chsh -s /usr/bin/zsh
