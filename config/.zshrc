@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -41,7 +41,7 @@ ZSH_THEME=""
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -70,7 +70,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker colored-man-pages autojump zsh-autosuggestions fast-syntax-highlighting)
+plugins=(docker wakatime colored-man-pages autojump zsh-autosuggestions fast-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,6 +88,9 @@ export EDITOR='vim'
 #  export EDITOR='mvim'
 #fi
 
+# Set default term to xterm (refer to https://github.com/zsh-users/zsh-autosuggestions/issues/229)
+if [ ! "$TMUX" = "" ]; then export TERM=xterm-256color; fi
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -95,7 +98,6 @@ export EDITOR='vim'
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
 if [ -f ~/.aliases ]; then
@@ -104,3 +106,5 @@ fi
 
 # Starship initializar
 eval "$(starship init zsh)"
+
+# bindkeys (bindkey is a unique system in "zshzle")
