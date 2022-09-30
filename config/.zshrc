@@ -70,7 +70,7 @@ ZSH_THEME=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker wakatime colored-man-pages autojump zsh-autosuggestions fast-syntax-highlighting)
+plugins=()
 
 source $ZSH/oh-my-zsh.sh
 
