@@ -23,7 +23,7 @@ format = "[[$ssh_symbol](fg:red) $hostname]($style) "
 
 [env_var]
 variable = "http_proxy"
-format = "[\\[[爵](fg:blue)\\]](fg:red)"
+format = "[{[󰞉](fg:green)}](fg:red)"
 
 [aws]
 symbol = "  "
