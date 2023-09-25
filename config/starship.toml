@@ -26,7 +26,7 @@ variable = "http_proxy"
 format = "[{[󰞉](fg:green)}](fg:red)"
 
 [aws]
-symbol = "  "
+symbol = "  "
 
 [buf]
 symbol = " "
@@ -41,13 +41,13 @@ symbol = " "
 symbol = " "
 
 [directory]
-read_only = " "
+read_only = " 󰌾"
 truncation_length = 4
 format = "[](fg:220) [$path]($style)[$read_only]($read_only_style) "
 
 
 [docker_context]
-symbol = " "
+symbol = "󰡨 "
 
 [elixir]
 symbol = " "
@@ -56,7 +56,7 @@ symbol = " "
 symbol = " "
 
 [git_branch]
-symbol = "שׂ "
+symbol = " "
 
 [golang]
 symbol = " "
@@ -77,10 +77,10 @@ symbol = " "
 symbol = " "
 
 [memory_usage]
-symbol = " "
+symbol = "󰍛 "
 
 [nim]
-symbol = " "
+symbol = " "
 
 [nix_shell]
 symbol = " "
@@ -89,13 +89,13 @@ symbol = " "
 symbol = " "
 
 [package]
-symbol = " "
+symbol = " "
 
 [python]
 symbol = " "
 
 [rlang]
-symbol = "ﳒ "
+symbol = " "
 
 [ruby]
 symbol = " "
